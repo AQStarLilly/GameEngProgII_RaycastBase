@@ -40,6 +40,8 @@ public class InputManager : MonoBehaviour, Inputs.IPlayerActions
     public event Action PauseInputEvent;
     public event Action JumpEvent;
     public event Action InteractEvent;
+
+    public event Action FireEvent;
     #endregion
 
     #region Input Callbacks
@@ -78,6 +80,11 @@ public class InputManager : MonoBehaviour, Inputs.IPlayerActions
     public void OnPause(InputAction.CallbackContext context)
     {
         if (context.started) PauseInputEvent?.Invoke();
+    }
+
+    public void OnFire(InputAction.CallbackContext context)
+    {
+        if(context.started) FireEvent?.Invoke();
     }
     #endregion
 

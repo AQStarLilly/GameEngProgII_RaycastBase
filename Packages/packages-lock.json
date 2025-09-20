@@ -8,7 +8,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.burst": {
-      "version": "1.8.21",
+      "version": "1.8.23",
       "depth": 3,
       "source": "registry",
       "dependencies": {
